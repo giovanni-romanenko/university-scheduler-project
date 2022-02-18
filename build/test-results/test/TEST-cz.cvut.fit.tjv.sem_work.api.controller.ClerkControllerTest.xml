@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-01-25T19:01:14" hostname="Inspirion" time="0.039">
+  <properties/>
+  <testcase name="readAllRequestsSolvableByClerk()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="deleteClerkWorksInOrganizationRelation()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="create()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="updateClerkWorksInOrganizationRelation()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.001"/>
+  <testcase name="readById()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="readAllUnassignedTimeSlotsOfClerk()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="updateById()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.003"/>
+  <testcase name="readAll()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.005"/>
+  <testcase name="updateClerkCanSolveRequestRelation()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="readOrganizationWhereClerkWorks()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="deleteClerkCanSolveRequestRelation()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.002"/>
+  <testcase name="deleteById()" classname="cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest" time="0.006"/>
+  <system-out><![CDATA[2022-01-25 20:01:14.747  INFO 30154 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest], using SpringBootContextLoader
+2022-01-25 20:01:14.748  INFO 30154 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-25 20:01:14.748  INFO 30154 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest]: ClerkControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-25 20:01:14.750  INFO 30154 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cz.cvut.fit.tjv.sem_work.RestServer for test class cz.cvut.fit.tjv.sem_work.api.controller.ClerkControllerTest
+2022-01-25 20:01:14.750  INFO 30154 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-25 20:01:14.750  INFO 30154 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3885f641, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ce83837, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4114e4e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@32c0befb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@25e0711c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18f4dc17, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7ea1383b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49a16672, org.springframework.test.context.event.EventPublishingTestExecutionListener@6fef96cb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5145eb45, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@265271b6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@648201f8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77c88a6d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@9294812, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3cc35740]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.0)
+
+2022-01-25 20:01:14.761  INFO 30154 --- [    Test worker] c.c.f.t.s.a.c.ClerkControllerTest        : Starting ClerkControllerTest using Java 16.0.2 on Inspirion with PID 30154 (started by cosiska in /home/cosiska/IdeaProjects/server)
+2022-01-25 20:01:14.761  INFO 30154 --- [    Test worker] c.c.f.t.s.a.c.ClerkControllerTest        : No active profile set, falling back to default profiles: default
+2022-01-25 20:01:14.923  INFO 30154 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-01-25 20:01:14.924  INFO 30154 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-01-25 20:01:14.924  INFO 30154 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2022-01-25 20:01:14.930  INFO 30154 --- [    Test worker] c.c.f.t.s.a.c.ClerkControllerTest        : Started ClerkControllerTest in 0.177 seconds (JVM running for 9.064)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

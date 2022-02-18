@@ -1,0 +1,169 @@
+### second name is missing => exception is expected
+POST http://localhost:8080/v1/clerks
+Content-Type: application/json
+
+{
+  "firstName" : "John"
+}
+
+### data is fine, "id" is expected to NOT be used
+POST http://localhost:8080/v1/clerks
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "random" : 1,
+  "firstName" : "John",
+  "secondName" : "Fischer"
+}
+
+### "id" is expected to NOT be used, second name is missing => exception
+POST http://localhost:8080/v1/clerks
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "random" : 1,
+  "firstName" : "John",
+  "essayAboutLifeGoals" : "I want to become Fischer."
+}
+
+### 200 expected, "id" is expected to NOT be used
+POST http://localhost:8080/v1/clerks
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "random" : 1,
+  "firstName" : "John",
+  "secondName" : "Non-Fischer",
+  "essayAboutLifeGoals" : "I want to become Fischer.",
+  "moodInIntegerEquivalent" : 123
+}
+
+### 200 expected, "id" is expected to NOT be used
+POST http://localhost:8080/v1/clerks
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "random" : 1,
+  "firstName" : "John",
+  "secondName" : "Non-Fischer-Fischer",
+  "moodInIntegerEquivalent" : 456
+}
+
+### 400 expected ("12345.123")
+POST http://localhost:8080/v1/clerks
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "random" : 1,
+  "firstName" : 0,
+  "secondName" : "Non-Fischer",
+  "essayAboutLifeGoals" : "I want to become Fischer.",
+  "moodInIntegerEquivalent" : "12345.123"
+}
+
+
+### data with "id" field is expected
+GET http://localhost:8080/v1/clerks
+
+### first name and second name are missing => exception is expected
+PUT http://localhost:8080/v1/clerks/1
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "moodInIntegerEquivalent" : 10
+}
+
+### 200 expected, "id" is expected to NOT be used
+PUT http://localhost:8080/v1/clerks/1
+Content-Type: application/json
+
+{
+  "id" : 3,
+  "random" : 1,
+  "firstName" : "John",
+  "secondName" : "Fischer",
+  "essayAboutLifeGoals" : "I want to become Fischer."
+}
+
+### data with "id" field is expected
+GET http://localhost:8080/v1/clerks
+
+### change in mood is expected
+GET http://localhost:8080/v1/clerks/1
+
+###
+POST http://localhost:8080/v1/request_states
+Content-Type: application/json
+
+{
+  "name" : "created"
+}
+
+### "id" should be ignored, so 200 is expected
+POST http://localhost:8080/v1/request_states
+Content-Type: application/json
+
+{
+  "id" : "123.123.123",
+  "name" : "resolved"
+}
+
+###
+GET http://localhost:8080/v1/request_states
+
+### Unique constraint of "name" is violated, so exception is expected
+POST http://localhost:8080/v1/request_states
+Content-Type: application/json
+
+{
+  "name" : "created"
+}
+
+### 200
+PUT http://localhost:8080/v1/request_states/4
+Content-Type: application/json
+
+{
+  "name" : "not_resolved"
+}
+
+###
+GET http://localhost:8080/v1/request_states
+
+### bad id => 404
+PUT http://localhost:8080/v1/request_states/100
+Content-Type: application/json
+
+{
+  "name" : "resolved"
+}
+
+### Unique constraint of "name" is NOT violated (we are updating "name" to the SAME value here); 200
+PUT http://localhost:8080/v1/request_states/4
+Content-Type: application/json
+
+{
+  "name" : "not_resolved"
+}
+
+### Unique constraint of "name" is violated, so exception is expected
+PUT http://localhost:8080/v1/request_states/4
+Content-Type: application/json
+
+{
+  "name" : "resolved"
+}
+
+### 
+DELETE http://localhost:8080/v1/request_states/4
+Content-Type: application/json
+
+
+###
+GET http://localhost:8080/v1/request_states

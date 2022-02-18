@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-01-25T19:01:10" hostname="Inspirion" time="0.065">
+  <properties/>
+  <testcase name="create()" classname="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" time="0.03"/>
+  <testcase name="exists()" classname="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" time="0.008"/>
+  <testcase name="readById()" classname="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" time="0.007"/>
+  <testcase name="update()" classname="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" time="0.006"/>
+  <testcase name="readAll()" classname="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" time="0.004"/>
+  <testcase name="deleteById()" classname="cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest" time="0.005"/>
+  <system-out><![CDATA[2022-01-25 20:01:09.283  INFO 30154 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest], using SpringBootContextLoader
+2022-01-25 20:01:09.284  INFO 30154 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-01-25 20:01:09.284  INFO 30154 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest]: OrganizationServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-01-25 20:01:09.290  INFO 30154 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cz.cvut.fit.tjv.sem_work.RestServer for test class cz.cvut.fit.tjv.sem_work.business.OrganizationServiceTest
+2022-01-25 20:01:09.293  INFO 30154 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-01-25 20:01:09.294  INFO 30154 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@792513ce, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f158d7a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6c54e85f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@24d8f7c1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@75b23bf7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@76cf1666, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3d121ef0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e17906c, org.springframework.test.context.event.EventPublishingTestExecutionListener@3a9e65da, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@34ec38c9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1924453a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7bd22282, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@32ab2897, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@67d4647b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5ce2e02e]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.0)
+
+2022-01-25 20:01:09.322  INFO 30154 --- [    Test worker] c.c.f.t.s.b.OrganizationServiceTest      : Starting OrganizationServiceTest using Java 16.0.2 on Inspirion with PID 30154 (started by cosiska in /home/cosiska/IdeaProjects/server)
+2022-01-25 20:01:09.322  INFO 30154 --- [    Test worker] c.c.f.t.s.b.OrganizationServiceTest      : No active profile set, falling back to default profiles: default
+2022-01-25 20:01:09.526  INFO 30154 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-25 20:01:09.539  INFO 30154 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 6 JPA repository interfaces.
+2022-01-25 20:01:09.752  INFO 30154 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-25 20:01:09.756  INFO 30154 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-25 20:01:09.784  INFO 30154 --- [    Test worker] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2022-01-25 20:01:09.785  INFO 30154 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-25 20:01:09.789  INFO 30154 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2022-01-25 20:01:09.864  INFO 30154 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-25 20:01:09.864  INFO 30154 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-25 20:01:10.169  WARN 30154 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-25 20:01:10.532  INFO 30154 --- [    Test worker] c.c.f.t.s.b.OrganizationServiceTest      : Started OrganizationServiceTest in 1.228 seconds (JVM running for 4.666)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
